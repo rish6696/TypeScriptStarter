@@ -1,0 +1,30 @@
+{
+  "name": "typescriptstartedproject",
+  "version": "1.0.0",
+  "description": "Started boiler plate for node project using TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "tsc -w",
+    "start-run": "nodemon --exec node ./build/index.js",
+    "start-dev": "concurrently  \"npm run build-dev\" \" npm run start-run\"  ",
+    "build-production": "tsc",
+    "start-production": "pm2 start build/index.js"
+  },
+  "author": "Rishabh Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@types/express": "^4.17.7",
+    "@types/hapi__joi": "^17.1.4",
+    "@types/mongoose": "^5.7.31",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-joi-validation": "^4.0.3",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
